@@ -12,3 +12,5 @@ soup = BeautifulSoup(response, 'html.parser')
 find = soup.find('h1', id="hello-world").get_text()
 
 print(find)
+
+# .prettify()
