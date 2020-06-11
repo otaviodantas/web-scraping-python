@@ -1,8 +1,5 @@
 import pandas as pd
-from urllib.request import urlretrieve
-from my_options import URL_INPUT, HEADER
 from urllib.request import urlopen
-from url_handling import handling_url
 from bs4 import BeautifulSoup
 
 
