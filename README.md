@@ -15,3 +15,21 @@ Antes de tudo precisamos ir até a página e visualizar quais dados nos interess
 > Para que os dados continuassem os iguais, mesmo que eu atualize a página, tive que orderna-los por cidade, e menor preço, dessa forma obteria os memos números sempre que acesse aquela URL.
 
 <img src = './img/scraping.PNG' width = 80%>
+
+### Indentificando os conteúdos na página
+
+Como já localizamos os dados visualmente, agora basta ir no código fonte HTML e indentificar onde eles estão.
+
+<img src = './img/code.PNG' width = 50% display = inline>
+<img src = './img/cards.PNG' width = 50% display = inline>
+
+Usaremos as classes das tags como endereços para pegarmos o conteúdo expecífico, desta forma separei os endereços em variáveis em um módulo separado do principal.
+
+```
+CONTAINER_PAGES_FIRST = 'col2 sc-15vff5z-5 fFdJjk'
+CONTAINER_PAGES_SEC = 'sc-jTzLTM sc-ksYbfQ uUqze'
+CONTAINER_PAGES_THIRD = 'sc-1mi5vq6-0 gfpAwo'
+
+CONTAINER_MAIN_CARDS_FIRST = 'sc-1fcmfeb-0 WQhDk'
+CONTAINER_MAIN_CARDS_SEC   = 'fnmrjs-1 ddDPXY'
+```
