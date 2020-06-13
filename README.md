@@ -14,4 +14,4 @@ Antes de tudo precisamos ir até a página e visualizar quais dados nos interess
 
 > Para que os dados continuassem os iguais, mesmo que eu atualize a página, tive que orderna-los por cidade, e menor preço, dessa forma obteria os memos números sempre que acesse aquela URL.
 
-![OLX](https://drive.google.com/file/d/1u3LFvDcNDYWwATjsc1_hBAyNua-doNjt/view?usp=sharing)
+<img src = './img/scraping.PNG' width = 80%>
