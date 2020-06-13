@@ -22,7 +22,7 @@ def search_items(result_pages, result_anuncio):
             card['category'] = item.find('p', 'fnmrjs-14 iIprpQ').getText()
 
             __cards.append(card)
-    
+
     return create_dataset(__cards)
 
 
@@ -46,7 +46,7 @@ def search_image(result_pages, result_anuncio):
 
 def create_dataset(cards):
     dataset = pd.DataFrame(cards)
-    # dataset.to_csv(r'./output/data', sep=';', index=False, encoding='utf-8-sig')
+    # dataset.to_csv('\output\data', sep=';',index=False, encoding='utf-8-sig')
     return dataset
 
 
