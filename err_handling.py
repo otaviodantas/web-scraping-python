@@ -1,15 +1,14 @@
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
-from my_options import URL_INPUT, HEADER
-from url_handling import handling_url
-from search import search
+from my_options import URL_INPUT, HEADER \
+    ,CONTAINER_PAGES_FIRST, CONTAINER_PAGES_SEC \
+    , CONTAINER_MAIN_CARDS_FIRST, CONTAINER_MAIN_CARDS_SEC \
+    , CONTAINER_PAGES_THIRD
+from all_def import search_items, handling_url, create_dataset
 from bs4 import BeautifulSoup
 
-url_input = URL_INPUT
-header = HEADER
-
 try:
-    request = Request(url_input, headers=header)
+    request = Request(URL_INPUT, headers=HEADER)
     response = urlopen(request)
 
 except HTTPError as e:
@@ -22,16 +21,13 @@ html_clean = handling_url(response)
 soup = BeautifulSoup(html_clean, 'html.parser')
 
 result_anuncio = soup.find(
-    'div', class_='sc-1fcmfeb-0 WQhDk').findAll('div', class_="fnmrjs-1 ddDPXY")
+    'div', class_ = CONTAINER_MAIN_CARDS_FIRST).findAll('div', class_ = CONTAINER_MAIN_CARDS_SEC)
 
-result_pages = soup.find(
-    'div', class_='col2 sc-15vff5z-5 fFdJjk').find('div', class_="sc-jTzLTM sc-ksYbfQ uUqze")
+result_pages = soup.find('div', class_ = CONTAINER_PAGES_FIRST).find('div', class_ = CONTAINER_PAGES_SEC)
 result_pages = int(result_pages.find(
-    'span', class_='sc-1mi5vq6-0 gfpAwo').getText().split()[2])
+    'span', class_= CONTAINER_PAGES_THIRD).getText().split()[2])
 
-return_data = search(result_pages, result_anuncio)
-items = return_data.search_items()
-data = return_data.create_dataset()
+return_data = search_items(result_pages, result_anuncio)
 # image = return_data.search_image()
 
-print(data)
+print(return_data)
