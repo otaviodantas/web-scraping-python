@@ -43,7 +43,7 @@ CONTAINER_MAIN_CARDS_SEC   = 'fnmrjs-1 ddDPXY'
 Os módulos são estruturados da seguinte forma: 
 
 - simple_scraping.py
-  - Ele pode ser executado como uma forma muito mais simples de web scraping, ele não te retorna dados, porém são poucas linhas de           comando que podem ser ultilizadas para entender melhor o funcionamento das bibliotecas.
+  - Ele pode ser executado como uma forma muito mais simples de web scraping, ele não te retorna dados, porém são poucas linhas de           comando que podem ser utilizadas para entender melhor o funcionamento das bibliotecas.
   
 - err_handling.py
   - Módulo principal, quande executado interage com os demais módulos e retorna um tabela com todos os dados obtidos
