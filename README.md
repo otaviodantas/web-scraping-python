@@ -10,7 +10,11 @@ No meu caso, vou utilizar o site da OLX para aplicar a técnica.
 
 ### Onde tudo começa.
 
-Antes de tudo precisamos ir até a página e visualizar quais dados nos interessa. Neste caso, vou pegar os dados de preço do produto, a sua descrição e o lugar de onde está sendo vendido.
+Antes de tudo precisamos ir até a página e visualizar quais dados nos interessa. 
+- Preço do produto
+- Descrição 
+- Localização 
+- Nº de páginas
 
 > Para que os dados continuassem os iguais, mesmo que eu atualize a página, tive que orderna-los por cidade, e menor preço, dessa forma obteria os memos números sempre que acesse aquela URL.
 
@@ -33,3 +37,19 @@ CONTAINER_PAGES_THIRD = 'sc-1mi5vq6-0 gfpAwo'
 CONTAINER_MAIN_CARDS_FIRST = 'sc-1fcmfeb-0 WQhDk'
 CONTAINER_MAIN_CARDS_SEC   = 'fnmrjs-1 ddDPXY'
 ```
+
+### Módulos
+
+Os módulos são estruturados da seguinte forma: 
+
+- simple_scraping.py
+  - Ele pode ser executado como uma forma muito mais simples de web scraping, ele não te retorna dados, porém são poucas linhas de           comando que podem ser ultilizadas para entender melhor o funcionamento das bibliotecas.
+  
+- err_handling.py
+  - Módulo principal, quande executado interage com os demais módulos e retorna um tabela com todos os dados obtidos
+  
+- all_def.py
+  - Módulo separado com as funções que foram utilizadas, separadas por suas funcionalidades, por exemplo, buscar o texto, a imagem,         gerar a tabela etc.
+  
+- my_options.py
+  - Neste módulo eu incorporei todas as informações estáticas em forma de varáveis, para que eu pudesse apenas importar e usa-las de         forma comum.
